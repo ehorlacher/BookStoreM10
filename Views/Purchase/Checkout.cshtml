@@ -1,0 +1,83 @@
+﻿@{
+}
+
+@model Purchase
+<h2> Check out now</h2>
+
+<p>Please enter your details and we will get you those books!</p>
+
+<form method="post" asp-action="Checkout">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <h4>Ship To:</h4>
+
+    <div class="form-group">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <br />
+
+    <h4>Address:</h4>
+
+    <div class="form-group">
+        <label asp-for="AddressLine1">AddressLine1:</label>
+        <input asp-for="AddressLine1" class="form-control" />
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AddressLine2">AddressLine2:</label>
+        <input asp-for="AddressLine2" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="AddressLine3">AddressLine3:</label>
+        <input asp-for="AddressLine3" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City">City:</label>
+        <input asp-for="City" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="State">State:</label>
+        <input asp-for="State" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Zip">Zipcode:</label>
+        <input asp-for="Zip" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Country">Country:</label>
+        <input asp-for="Country" class="form-control" />
+    </div>
+    <br />
+
+    <h4>Payment Information:</h4>
+
+    <div class="form-group">
+        <label asp-for="CardNumber">Card Number:</label>
+        <input asp-for="CardNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ExpirationDate">Expiration Date:</label>
+        <input asp-for="ExpirationDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CVV">CVV:</label>
+        <input asp-for="CVV" class="form-control" />
+    </div>
+    <br />
+
+    <div class="float-end">
+        <input class="btn btn-primary" type="submit" value="Place Order" />
+    </div>
+
+</form>
