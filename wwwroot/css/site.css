@@ -69,3 +69,30 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+button {
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+    button:after {
+        content: '  »';
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    button:hover {
+
+    }
+
+        button:hover:after {
+            opacity: 1;
+        }

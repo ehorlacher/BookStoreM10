@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BookStoreM10</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
-<body >
+
+<body style="background-image: url('https://images.unsplash.com/photo-1546521343-4eb2c01aa44b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80'); background-attachment: fixed; ">
     <div class="bg-dark text-white p-2">
         <div class="container-fluid">
             <div class="row">
@@ -27,13 +28,14 @@
             <vc:categories></vc:categories>
         </div>
 
-        <div class="col-9">
+        <div class="col-9 ">
             <div>
                 @RenderBody()
             </div>
         </div>
 
     </div>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
