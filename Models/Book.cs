@@ -13,6 +13,8 @@ namespace BookStoreM10.Models
         [Key]
         [Required]
         public int BookId { get; set; }
+
+        [Required(ErrorMessage = "Please enter a book title")]
         public string Title { get; set; }
         public string Author { get; set; }
         public string Publisher { get; set; }
@@ -20,6 +22,8 @@ namespace BookStoreM10.Models
         public string Classification { get; set; }
         public string Category { get; set; }
         public int PageCount { get; set; }
+
+        [Required(ErrorMessage = "Please enter a price")]
         public double Price { get; set; }
     }
 }

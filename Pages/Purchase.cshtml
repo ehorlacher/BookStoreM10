@@ -27,7 +27,7 @@
 
                 <td class="text-center">
                     <form method="post" asp-page-handler="Remove">
-                        <input type="hidden" name="isbn" value="@i.Book.Isbn" />
+                        <input type="hidden" name="BookId" value="@i.Book.BookId" />
                         <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
                         <button type="submit" class="btn btn-sm btn-danger">Remove</button>
                     </form>

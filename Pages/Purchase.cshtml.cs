@@ -27,18 +27,18 @@ namespace BookStoreM10.Pages
         }
 
         // Isbn is a string, not an integer
-        public IActionResult OnPost(string isbn, string returnUrl)
+        public IActionResult OnPost(int bookid, string returnUrl)
         {
-            Book b = repo.Books.FirstOrDefault(x => x.Isbn == isbn);
+            Book b = repo.Books.FirstOrDefault(x => x.BookId == bookid);
 
             cart.AddItem(b, 1);
 
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
 
-        public IActionResult OnPostRemove (string isbn, string returnUrl)
+        public IActionResult OnPostRemove (int bookid, string returnUrl)
         {
-            cart.RemoveItem(cart.Items.First(x => x.Book.Isbn == isbn).Book);
+            cart.RemoveItem(cart.Items.First(x => x.Book.BookId == bookid).Book);
 
             return RedirectToPage(new {ReturnUrl = returnUrl });
         }

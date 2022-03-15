@@ -13,7 +13,7 @@ namespace BookStoreM10.Models
         public virtual void AddItem (Book bok, int qty)
         {
             CartLineItem line = Items
-                .Where(b => b.Book.Isbn == bok.Isbn)
+                .Where(b => b.Book.BookId == bok.BookId)
                 .FirstOrDefault();
 
 
@@ -33,7 +33,7 @@ namespace BookStoreM10.Models
 
         public virtual void RemoveItem (Book bok)
         {
-            Items.RemoveAll(x => x.Book.Isbn == bok.Isbn);
+            Items.RemoveAll(x => x.Book.BookId == bok.BookId);
         }
 
         public virtual void ClearCart()

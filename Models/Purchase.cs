@@ -45,5 +45,8 @@ namespace BookStoreM10.Models
         [Required(ErrorMessage = "Please enter a valid CVV")]
         public string CVV { get; set; }
 
+        [BindNever]
+        public bool PurchaseShipped { get; set; }
+
     }
 }
